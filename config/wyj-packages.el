@@ -153,6 +153,15 @@ the mode-line."
 	    (show-paren-mode t)))
 
 
+;; autopair
+(require 'autopair)
+(autopair-global-mode) ;; to enable in all buffers
+
+(add-hook 'term-mode-hook
+          (lambda ()
+            (setq autopair-dont-activate t)))
+
+
 ;; mark-multiple
 ;; 看这个video http://emacsrocks.com/e08.html
 (require 'mark-multiple)
