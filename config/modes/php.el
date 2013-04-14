@@ -25,6 +25,7 @@
     'php-complete-function)  
   )
 (add-hook 'php-mode-hook 'wicked/php-mode-init)
+(add-hook 'php-mode-hook 'hs-minor-mode)    ;; 开启代码折叠功能
 
 
 ;; 参考网址http://my.oschina.net/u/874560/blog/91955 第8部分

@@ -172,3 +172,17 @@ the mode-line."
 (global-set-key (kbd "C-<") 'mark-previous-like-this)
 (global-set-key (kbd "C->") 'mark-next-like-this)
 (global-set-key (kbd "C-M-m") 'mark-more-like-this) ; like the other two, but takes an argument (negative is previous)
+
+
+;; hideshowvis
+;; 代码折叠增加符号
+(autoload 'hideshowvis-enable "hideshowvis" "Highlight foldable regions")
+(autoload 'hideshowvis-minor-mode
+  "hideshowvis"
+  "Will indicate regions foldable with hideshow in the fringe."
+  'interactive)
+(dolist (hook (list 'emacs-lisp-mode-hook
+                    'c++-mode-hook
+		    'php-mode-hook
+		    ))
+  (add-hook hook 'hideshowvis-enable))
