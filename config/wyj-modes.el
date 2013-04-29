@@ -61,5 +61,18 @@
 ;; 边框提供特殊符号 Meteor帮助
 (setq-default indicate-buffer-boundaries (quote left))
 
+;; org-mode for octopress
+;; http://jaderholm.com/blog/blogging-with-org-mode-and-octopress
+(setq org-publish-project-alist
+   '(("blog" .  (:base-directory "~/octopress/source/org_posts/"
+                 :base-extension "org"
+                 :publishing-directory "~/octopress/source/_posts/"
+                 :sub-superscript ""
+                 :recursive t
+                 :publishing-function org-publish-org-to-html
+                 :headline-levels 4
+                 :html-extension "markdown"
+                 :body-only t))))
+
 
 (provide 'wyj-modes)
