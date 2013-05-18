@@ -1,0 +1,52 @@
+s
+man xargs
+man 7 signal
+lsof
+ll
+ls
+ls -a
+githug paly
+githug play
+githug play
+githug play
+git clone https://github.com/Gazler/cloneme
+git play
+githug play
+git clone https://github.com/Gazler/cloneme my_cloned_repo
+ll
+ls
+ls -a
+ls -A
+ls -l
+ls -al
+githug play
+ls
+ls -la
+githug play
+githug hint
+githug play
+ls -la
+git status
+githug play
+git status
+githug play
+git delete deleteme.rb
+git rm deleteme.rb
+githug play
+ls -la
+git rm deleteme.rb 
+githug hint
+git st
+git status
+git rm --cached deleteme.rb 
+git play
+githug play
+ls -la
+git add .
+githug play
+githug hint
+git stash clear
+githug play
+ls
+git stash save lyrics.txt 
+githug play

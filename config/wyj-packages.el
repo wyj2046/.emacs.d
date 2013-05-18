@@ -186,3 +186,9 @@ the mode-line."
 		    'php-mode-hook
 		    ))
   (add-hook hook 'hideshowvis-enable))
+
+
+;; google-translate
+(require 'google-translate)
+(global-set-key "\C-ct" 'google-translate-at-point)
+(global-set-key "\C-cT" 'google-translate-query-translate)
