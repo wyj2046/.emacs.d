@@ -16,7 +16,7 @@
 ;; (color-theme-blackboard)
 
 (require 'color-theme-molokai)
-(color-theme-molokai)
+;; (color-theme-molokai)
 
 ;; (color-theme-initialize)  ;;对于内置theme，要加这句话
 ;; (color-theme-blue-mood)
@@ -90,5 +90,21 @@
 ;; (setq zone-programs (remq 'zone-pgm-stress zone-programs))
 ;; (setq zone-programs (remq 'zone-pgm-stress-destress zone-programs))
 ;; (setq zone-programs (remq 'zone-pgm-dissolve zone-programs))
+
+
+;; 随机换color theme
+;; http://xeon.newsmth.net/nForum/#!article/Emacs/105300?p=2
+(defun random-theme()
+  (interactive)
+  (dolist (theme custom-enabled-themes)
+    (disable-theme theme))
+  (load-theme (let ((theme (nth (random (length (custom-available-themes))) (custom-available-themes)))) 
+		(message "loaded theme: %s" theme)
+		theme)))
+
+(condition-case nil
+    (random-theme)
+  (error nil))
+
 
 (provide 'wyj-ui)
