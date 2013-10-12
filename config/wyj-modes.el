@@ -74,5 +74,10 @@
                  :html-extension "markdown"
                  :body-only t))))
 
-
+;; 开启babel功能
+;; http://coldnew.github.io/blog/2013/07/13_07e15.html
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((dot . t))
+ )
 (provide 'wyj-modes)
