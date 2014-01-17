@@ -80,4 +80,13 @@
  'org-babel-load-languages
  '((dot . t))
  )
+
+;; undo/redo之前的窗口操作
+;; http://blog.csdn.net/redguardtoo/article/details/7768233
+(winner-mode 1)
+;; copied from http://puntoblogspot.blogspot.com/2011/05/undo-layouts-in-emacs.html
+(global-set-key (kbd "C-x 4 u") 'winner-undo)
+(global-set-key (kbd "C-x 4 r") 'winner-redo)
+
+
 (provide 'wyj-modes)
